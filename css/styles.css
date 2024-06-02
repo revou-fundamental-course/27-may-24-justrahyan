@@ -80,7 +80,7 @@ section#section-container #home header{
 section#section-container #home article p{
     font-size: 18px;
     margin-bottom: 1rem;
-    color: #828689;
+    color: #BDBDC2;
 }
 section#section-container #home article p span{
     font-weight: bolder;
@@ -302,7 +302,7 @@ footer .footer-right a i{
 /* Smartphone */
 @media screen and (max-width: 768px){
     nav .nav-container .nav-logo img{
-        width: 50%;
+        width: 80%;
     }
     nav .nav-container ul {
         display: flex;
@@ -341,7 +341,7 @@ footer .footer-right a i{
     }
     section#section-container #facilities .facility-list div{
         height: auto;
-        width: 80%;
+        width: 100%;
         margin: auto auto;
     }
     section#section-container #facilities .facility-list div img{
@@ -349,9 +349,15 @@ footer .footer-right a i{
         border-radius: 5px;
         margin-bottom: 1rem;
     }
+    section#section-container #facilities .facility-list div h2{
+        font-size: 1.2rem;
+    }
+    section#section-container #facilities .facility-list div p{
+        font-size: 12px;
+    }
     section#section-container{
         padding: 2rem;
-        width: 80%;
+        width: 100%;
         margin: auto auto;
     }
     section#section-container #facilities{
@@ -370,29 +376,39 @@ footer .footer-right a i{
         flex-direction: column;
         width: 100%;
     }
+    section#section-container #message-us .message-us-section form table textarea{
+        height: 80px;
+    }
     section#section-container #message-us .message-us-section .result-container{
         width: 100%;
         height: 100%;
         margin-top: 1rem;
     }
     section#section-container #message-us .message-us-section .result-container #form-result{
-        padding-top: 1rem;
-        height: 150px;
+        padding-top: .5rem;
+        height: 120px;
+        font-size: 13px;
     }
     footer{
         display: flex;
         flex-direction: column;
         padding: 2rem;
-        width: 80%;
+        width: 100%;
     }
     footer div{
         margin-bottom: 2rem;
     }
+    footer .socmed a{
+        font-size: 13px;
+    }
     footer .footer-right{
         width: 100%;
     }
+    footer .self p{
+        font-size: 14px;
+    }
     footer .footer-right p{
-        font-size: 15px;
+        font-size: 14px;
     }
     footer .footer-right a{
         font-size: 14px;
@@ -440,6 +456,9 @@ footer .footer-right a i{
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    section#section-container #message-us .message-us-section form .tags{
+        padding: .2rem;
     }
     section#section-container #message-us .message-us-section .result-container{
         width: 100%;
