@@ -4,8 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahyan Portofolio</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body id="top">
+    <nav>
+        <div class="nav-container">
+            <a class="nav-logo" href="index.html">
+                <img src="assets/logo.png" alt="Logo">
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul>
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#facilities" class="nav-item">Facilities</a></li>
+                <li><a href="#message-us" class="nav-item">Message Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="section-container">
+        <!-- Home -->
+        <section id="home" class="section-content">
+            <header>
+                <h1>Hai Rahyan!, <br>Selamat Datang di Great Hotel.</h1>
+            </header>
+            <article>
+                <p>Selamat datang di <span>Great Hotel</span>. Temani liburanmu jadi lebih menyenangkan!</p>
+
+                <div class="banner-container">
+                    <img src="assets/banner.jpg" alt="">
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Our Facilities -->
+        <section id="facilities" class="section-content">
+            <header>
+                <h1>Fasilitas Kami</h1>
+                <p><span>Great Hotel</span> menyediakan berbagai fasilitas bintang lima yang dapat anda gunakan untuk membuat liburanmu menjadi lebih menyenangkan.</p>
+            </header>
+
+            <article class="facility-list">
+                <div>
+                    <img src="assets/restoran.jpg" alt="">
+                    <h2>Restoran</h2>
+                    <p>Terletak di lantai dasar, Menampilkan kreasi masakan favorit Indonesia dan Internasional 
+                        dengan menu <span>Ala Carte</span> yang tersedia 24 jam setiap hari.</p>
+                </div>
+
+                <div>
+                    <img src="assets/gym.jpg" alt="">
+                    <h2>Gym</h2>
+                    <p>Terletak di lantai 2, dilengkapi dengan alat <span>Cardiovascular, Free Weights, Treadmill, Static Bicycle</span>, dan alat gym lainnya.</p>
+                </div>
+
+                <div>
+                    <img src="assets/kolam.jpg" alt="">
+                    <h2>Kolem Renang</h2>
+                    <p>Kolam renang terbesar di kota, dengan konsep out door. Dapat menampung acara seperti 
+                        arisan atau pesta ulang tahun hingga 20 meja bundar.</p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+        <!-- Message Us -->
+        <section id="message-us" class="section-content">
+            <header>
+                <h1>Hubungi Kami</h1>
+                <p>Hubungi kami sekarang jika anda memiliki pertanyaan dengan website kami.</p>
+            </header>
+
+            <section class="message-us-section">
+                <!-- form -->
+                <section class="form-message">
+                    <form onsubmit="return displayResult()">
+                        <table>
+                            <tr class="input-form">
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" name="nama" id="nama" placeholder="Nama" class="input-tag tags">
+                                </td>
+                            </tr>
+                            <tr class="input-form">
+                                <td>Tanggal Lahir</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="date" name="tgl_lahir" id="tgl_lahir" placeholder="Tanggal Lahir" class="input-tag tags">
+                                </td>
+                            </tr>
+                            <tr class="input-form">
+                                <td>Jenis Kelamin</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="radio" name="jkel" value="Laki-laki" id="laki-laki" class="laki-laki jkel"> <label>Laki-laki</label>
+                                    <input type="radio" name="jkel" value="Perempuan" id="perempuan" class="perempuan jkel"> <label>Perempuan</label>
+                                </td>
+                            </tr>
+                            <tr class="input-form">
+                                <td>Pesan</td>
+                                <td>:</td>
+                                <td>
+                                    <textarea name="pesan" id="pesan" placeholder="Pesan" class="input-tag tags"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="submit" value="Submit" class="submit tags">
+                    </form>
+                </section>
+
+                <!-- result -->
+                <section class="result-container">
+                    <textarea name="result" placeholder="Pesan anda akan tampil disini!" id="form-result" disabled></textarea>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <footer>
+        <div class="socmed">
+            <h3>Social Media</h3>
+            <a href="https://www.instagram.com/rahyan_n/">Instagram <span>(Personal)</span></a>
+            <a href="https://www.instagram.com/justrahyan/">Instagram <span>(Project)</span></a>
+            <a href="https://www.linkedin.com/in/muhammadrahyan">LinkedIn <span>(Personal)</span></a>
+        </div>
+        <div class="self">
+            <h3>Muhammad Rahyan Noorfauzan</h3>
+            <p>Makassar, South Sulawesi</p>
+        </div>
+        <div class="footer-right">
+            <p>@justrahyan 2024 Mini Project</p>
+            <a href="#top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
