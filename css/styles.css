@@ -181,6 +181,9 @@ section#section-container #message-us .message-us-section form table tr.input-fo
     flex: 1;
     margin-bottom: .5rem;
 }
+section#section-container #message-us .message-us-section form table tr.input-form:nth-child(4){
+    margin-bottom: 0;
+}
 section#section-container #message-us .message-us-section form table tr.input-form td:nth-child(1){
     width: 150px;
     color: #E5E5EA;
@@ -199,9 +202,13 @@ section#section-container #message-us .message-us-section form table tr.input-fo
     width: 100%;
     border-radius: 4px;
     border: 1px solid #35323d;
+    padding: .3rem;
 }
-section#section-container #message-us .message-us-section form table tr.input-form p#error-msg{
-    color: #fff;
+section#section-container #message-us .message-us-section form #error-msg{
+    color: #E97777;
+    padding: .5rem;
+    border-radius: 5px;
+    text-align: center;
 }
 section#section-container #message-us .message-us-section form input.submit{
     width: 100%;
@@ -214,13 +221,11 @@ section#section-container #message-us .message-us-section form input.submit:hove
     background-color: #35323d;
     color: #E5E5EA;
 }
-section#section-container #message-us .message-us-section form .tags{
-    padding: .3rem;
-}
 section#section-container #message-us .message-us-section form table textarea{
     height: 120px;
     resize: none;
 }
+
 /* Message Us Result */
 section#section-container #message-us .message-us-section .result-container{
     width: 50%;
@@ -234,6 +239,12 @@ section#section-container #message-us .message-us-section .result-container #for
     background-color: #fff;
     resize: none;
     border-radius: 4px;
+}
+section#section-container #message-us .message-us-section .result-container #form-result p{
+    font-weight: bold;
+}
+section#section-container #message-us .message-us-section .result-container #form-result p span{
+    font-weight: normal;
 }
 
 /* Footer */
