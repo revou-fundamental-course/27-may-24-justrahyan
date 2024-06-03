@@ -39,7 +39,7 @@
         <!-- Home -->
         <section id="home" class="section-content">
             <header>
-                <h1>Selamat Datang di Great Hotel.</h1>
+                <h1>Hai, <span id="new-user"></span>! <br>Selamat Datang di Great Hotel.</h1>
             </header>
             <article>
                 <p><span>Great Hotel</span> hadir untuk menemani liburanmu jadi lebih menyenangkan!</p>
@@ -93,36 +93,40 @@
             <section class="message-us-section">
                 <!-- form -->
                 <section class="form-message">
-                    <form onsubmit="return displayResult()">
+                    <form name="form-input" onsubmit="return displayResult()">
                         <table>
                             <tr class="input-form">
                                 <td>Nama</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="text" name="nama" id="nama" placeholder="Nama" class="input-tag tags">
+                                    <input type="text" name="nama" id="nama" placeholder="Nama" class="input-tag tags" required>
                                 </td>
+                                <p id="error-msg"></p>
                             </tr>
                             <tr class="input-form">
                                 <td>Tanggal Lahir</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="date" name="tgl_lahir" id="tgl_lahir" placeholder="Tanggal Lahir" class="input-tag tags">
+                                    <input type="date" name="tgl_lahir" id="tgl_lahir" placeholder="Tanggal Lahir" class="input-tag tags" required>
                                 </td>
+                                <p id="error-msg"></p>
                             </tr>
                             <tr class="input-form">
                                 <td>Jenis Kelamin</td>
                                 <td>:</td>
                                 <td>
-                                    <input type="radio" name="jkel" value="Laki-laki" id="laki-laki" class="laki-laki jkel"> <label>Laki-laki</label>
-                                    <input type="radio" name="jkel" value="Perempuan" id="perempuan" class="perempuan jkel"> <label>Perempuan</label>
+                                    <input type="radio" name="jkel" value="Laki-laki" id="laki-laki" required> <label>Laki-laki</label>
+                                    <input type="radio" name="jkel" value="Perempuan" id="perempuan" required> <label>Perempuan</label>
                                 </td>
+                                <p id="error-msg"></p>
                             </tr>
                             <tr class="input-form">
                                 <td>Pesan</td>
                                 <td>:</td>
                                 <td>
-                                    <textarea name="pesan" id="pesan" placeholder="Pesan" class="input-tag tags"></textarea>
+                                    <textarea name="pesan" id="pesan" placeholder="Pesan" class="input-tag tags" required></textarea>
                                 </td>
+                                <p id="error-msg"></p>
                             </tr>
                         </table>
                         <input type="submit" value="Submit" class="submit">
@@ -131,7 +135,13 @@
 
                 <!-- result -->
                 <section class="result-container">
-                    <textarea name="result" placeholder="Pesan anda akan tampil disini!" id="form-result" disabled></textarea>
+                    <!-- <textarea name="result" placeholder="Pesan anda akan tampil disini!" id="form-result" disabled></textarea> -->
+                    <div id="form-result">
+                        <p>Nama: <span id="user-nama"></span></p>
+                        <p>Tanggal Lahir: <span id="user-tgl-lahir"></span></p>
+                        <p>Jenis Kelamin: <span id="user-jkel"></span></p>
+                        <p>Pesan: <span id="user-pesan"></span></p>
+                    </div>
                 </section>
             </section>
         </section>
