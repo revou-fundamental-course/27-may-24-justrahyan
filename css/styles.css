@@ -164,7 +164,7 @@ section#section-container #facilities .facility-list{
     flex-direction: row;
     margin: auto auto;
 }
-section#section-container #facilities .facility-list div{
+section#section-container #facilities .facility-list >div{
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -175,7 +175,7 @@ section#section-container #facilities .facility-list div{
     transition: .5s ease;
     background-color: #1E1F20;
 }
-section#section-container #facilities .facility-list div:hover{
+section#section-container #facilities .facility-list > div:hover{
     box-shadow: rgba(83, 82, 88, 0.15) 0px 28px 30px 0px;
     transform: translateY(-10px);
 }
@@ -377,15 +377,15 @@ footer .footer-right a i{
     section#section-container #message-us header h1{
         font-size: 1.5rem;
     }
-    section#section-container #facilities .facility-list div{
-        height: auto;
-        width: 100%;
-        margin: auto auto;
+    section#section-container #facilities .facility-list > div{
+        max-width: 650px;
+        flex-direction: row;
     }
     section#section-container #facilities .facility-list div img{
-        width: 100%;
+        width: 50%;
         border-radius: 5px;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
+        margin-right: 1rem;
     }
     section#section-container{
         padding: 2rem;
