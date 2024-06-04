@@ -58,14 +58,20 @@ function displayResult() {
         return false;
     }
 
+    const currentTime = new Date();
+    const date = currentTime.toLocaleDateString();
+    const time = currentTime.toLocaleTimeString();
+
     document.getElementById("error-msg").innerHTML = "";
-    setSenderform(nama, tglLahir, jKel, pesan);
+    setSenderform(nama, tglLahir, jKel, pesan, date, time);
 
     return false;
 }
 
 // Menampilkan inputan pengguna
-function setSenderform(nama, tglLahir, jKel, pesan){
+function setSenderform(nama, tglLahir, jKel, pesan, date, time){
+    document.getElementById("current-date").innerHTML = date;
+    document.getElementById("current-time").innerHTML = time;
     document.getElementById("user-nama").innerHTML = nama;
     document.getElementById("user-tgl-lahir").innerHTML = tglLahir;
     document.getElementById("user-jkel").innerHTML = jKel;
