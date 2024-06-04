@@ -5,8 +5,22 @@ function toggleMenu() {
 }
 
 // Mengambil nama user baru (awal buka website)
-let name = prompt("Selamat datang di Great Hotel, masukkan nama anda disini!", "");
-document.getElementById("new-user").innerHTML = name;
+// let name = prompt("Selamat datang di Great Hotel, masukkan nama anda disini!", "");
+// document.getElementById("new-user").innerHTML = name;
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document.querySelector(".welcome-popup").style.display = "block";
+        document.querySelector(".overlay-blur").style.display = "block";
+    }, 0);
+
+    document.querySelector("#submit-user").addEventListener("click", function(event){
+        event.preventDefault();
+        const namaPengguna = document.querySelector("#user").value;
+        document.querySelector("#new-user").innerHTML = namaPengguna;
+        document.querySelector(".welcome-popup").style.display = "none";
+        document.querySelector(".overlay-blur").style.display = "none";
+    });
+});
 
 // Validation form
 function displayResult() {
@@ -27,13 +41,10 @@ function displayResult() {
     return false;
 }
 
+// Menampilkan inputan pengguna
 function setSenderform(nama, tglLahir, jKel, pesan){
     document.getElementById("user-nama").innerHTML = nama;
     document.getElementById("user-tgl-lahir").innerHTML = tglLahir;
     document.getElementById("user-jkel").innerHTML = jKel;
     document.getElementById("user-pesan").innerHTML = pesan;
 }
-
-    // const currentTime = new Date();
-    // const date = currentTime.toLocaleDateString();
-    // const time = currentTime.toLocaleTimeString();

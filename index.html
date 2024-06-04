@@ -35,6 +35,13 @@
         </div>
     </nav>
 
+    <div class="welcome-popup">
+        <h1>Selamat datang di Great Hotel, masukkan nama anda terlebih dahulu!</h1>
+        <input type="text" name="user" id="user" placeholder="Masukkan nama anda" required>
+        <input type="submit" name="submit" id="submit-user">
+    </div>
+    <div class="overlay-blur"></div>
+
     <section id="section-container">
         <!-- Home -->
         <section id="home" class="section-content">
@@ -132,7 +139,6 @@
 
                 <!-- result -->
                 <section class="result-container">
-                    <!-- <textarea name="result" placeholder="Pesan anda akan tampil disini!" id="form-result" disabled></textarea> -->
                     <div id="form-result">
                         <p>Nama: <span id="user-nama"></span></p>
                         <p>Tanggal Lahir: <span id="user-tgl-lahir"></span></p>
