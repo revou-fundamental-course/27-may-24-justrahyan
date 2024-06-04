@@ -164,7 +164,7 @@ section#section-container #facilities .facility-list{
     flex-direction: row;
     margin: auto auto;
 }
-section#section-container #facilities .facility-list >div{
+section#section-container #facilities .facility-list > div{
     display: flex;
     flex-direction: column;
     flex: 1;
