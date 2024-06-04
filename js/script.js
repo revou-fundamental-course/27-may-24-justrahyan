@@ -5,8 +5,6 @@ function toggleMenu() {
 }
 
 // Mengambil nama user baru (awal buka website)
-// let name = prompt("Selamat datang di Great Hotel, masukkan nama anda disini!", "");
-// document.getElementById("new-user").innerHTML = name;
 window.addEventListener("load", function(){
     setTimeout(function(){
         document.querySelector(".welcome-popup").style.display = "block";
