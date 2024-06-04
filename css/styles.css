@@ -443,7 +443,7 @@ footer .footer-right a i{
 /* Smartphone */
 @media screen and (max-width: 768px){
     .welcome-popup{
-        width: 55%;
+        width: 60%;
     }
     .welcome-popup h1{
         font-size: 1rem;
